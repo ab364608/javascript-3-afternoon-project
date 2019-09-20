@@ -50,8 +50,18 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater(){
+   return employees.filter(function(element){
+    return element.firstName !== 'Theo'
+    }).map(function(element){
+    if (element.firstName === 'Lorie') {
+      element.department = 'HR';
+    }
+    return element
+  })
 
+  
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -68,7 +78,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(array){
+ let noDoubles = []
+  for (i=0; i < array.length; i++){
+    if(noDoubles.indexOf(array[i]) == -1){
+      noDoubles.push(array[i])
+    }
+  }
+  return noDoubles
+}
 
 
 
